@@ -7,6 +7,7 @@
     --high-pink: #e0c1c9;
     --magenta-blue: #cbc3da;
     --white: #ffffff;
+    --black: #000000;
 }
 
 .logo img{
@@ -20,6 +21,7 @@ header {
 }
 
 .container {
+    height: 90px;
     box-sizing: border-box; 
     display: flex;
     align-items: center;
@@ -31,16 +33,29 @@ header {
 }
 
 #menu {
-    /* display: none; */
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 90px;
+    right: 0;
+    background-color: var(--magenta-light);
+    transition: .6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
 }
 
 #menu a {
     display: block;
-    padding: .5rem;
+    padding: 1rem 0;
+    margin: 0 1rem;
     color: var(--white);
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 11pt;
+    font-size: 12pt;
+    border-bottom: 2px solid rgba(0, 0, 0, .05);
+
 }
 
 a:hover {
@@ -48,11 +63,49 @@ a:hover {
 }
 
 #btn-mobile {
+    display: flex;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border: none;
+    background: none;
+    color: var(--white);
+    font-size: 12pt;
+}
+
+#hamburguer {
     display: block;
+    border-top: 2px solid;
+    width: 20px;
+}
+
+#hamburguer::after, #hamburguer::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+}
+
+#nav-bar.active #hamburguer {
+    border-top-color: transparent;
+}
+
+#nav-bar.active #hamburguer::before {
+    transform: rotate(135deg);
+}
+
+#nav-bar.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
 }
 
 #nav-bar.active #menu {
-    display: flex;
+    height: 100vh;
+    visibility: visible;
+    overflow-y: auto;
 }
 
 /* Tablet Version (A partir de 768px) */
