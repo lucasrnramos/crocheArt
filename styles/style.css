@@ -1,11 +1,69 @@
 /* Using Mobile First */
+:root {
+    /* Colors: */
+    --magenta-light: #d1b4ca;
+    --light-pink: #efe0e5;
+    --medium-pink: #f0d2de;
+    --high-pink: #e0c1c9;
+    --magenta-blue: #cbc3da;
+    --white: #ffffff;
+}
 
-h1 {
-    font-family: 'Crochet Art', 'Times New Roman';
+.logo img{
+    width: 5em;
+    height: 5em;
+}
+
+header {
+    width: 100vw;
+    background-color: var(--magenta-light);
+}
+
+.container {
+    box-sizing: border-box; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    /* width: 5em; */
+    /* margin: 0 auto; */
+    /* max-width: 375px; */
+}
+
+#menu {
+    /* display: none; */
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+    color: var(--white);
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 11pt;
+}
+
+a:hover {
+    background-color: var(--magenta-blue);
+}
+
+#btn-mobile {
+    display: block;
+}
+
+#nav-bar.active #menu {
+    display: flex;
 }
 
 /* Tablet Version (A partir de 768px) */
 
-@media screen and (min-width: 768px){
-    
+@media screen and (min-width: 600px){
+    #btn-mobile {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        gap: .5rem;
+    }
 }
