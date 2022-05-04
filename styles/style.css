@@ -1,3 +1,11 @@
+/* Using Mobile First */
+
 h1 {
     font-family: 'Crochet Art', 'Times New Roman';
+}
+
+/* Tablet Version (A partir de 768px) */
+
+@media screen and (min-width: 768px){
+    
 }
