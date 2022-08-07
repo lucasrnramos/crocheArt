@@ -10,6 +10,14 @@
     --black: #000000;
 }
 
+body{
+    background-color: #000000;
+}
+
+main{
+    color: #ffffff;
+}
+
 .logo img{
     width: 5em;
     height: 5em;

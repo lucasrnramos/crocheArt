@@ -1,3 +1,4 @@
+//Menu Hamburguer
 const btnMobile = document.querySelector('#btn-mobile');
 
 function toggleMenu(event){
@@ -14,3 +15,8 @@ function toggleMenu(event){
 }
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+//Acessando elementos
+
+
+
